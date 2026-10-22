@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sree Sowmya</title>
+<meta name="description" content="Portfolio of Geepalyam Sree Sowmya, B.Tech CSE student building Java, Spring Boot and React applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topfill"></div>
+<div class="progress" id="progress"></div>
+<div class="glow" id="glow"></div>
+<div class="pal" id="pal" hidden>
+  <div class="pal-box" role="dialog" aria-modal="true" aria-label="Jump to">
+    <input id="pal-in" type="text" placeholder="Jump to a section, project or link" autocomplete="off" aria-label="Search">
+    <ul id="pal-list"></ul>
+  </div>
+</div>
+<div class="shell" id="top">
+
+  <aside class="side">
+    <div class="who">
+      <p class="kicker">B.Tech CSE · 2027</p>
+      <div class="id">
+        <img class="avatar" src="portrait.jpg" alt="Portrait of Geepalyam Sree Sowmya" width="104" height="104">
+        <h1>Geepalyam <span>Sree Sowmya</span></h1>
+      </div>
+      <p class="tag">Full-stack developer in training. Java and Spring Boot backends, React frontends, deployed and live.</p>
+      <p class="role" aria-live="off"><span class="prompt">&gt;</span> building <span id="role">REST APIs</span><span class="caret" aria-hidden="true"></span></p>
+      <nav aria-label="Sections">
+        <ul class="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="side-foot">
+      <div class="links">
+        <a class="pill" data-link="github" href="#" hidden>GitHub</a>
+        <a class="pill" data-link="linkedin" href="#" hidden>LinkedIn</a>
+      </div>
+      <p class="loc">Tirupati, Andhra Pradesh</p>
+      <button class="hint" type="button" id="open-pal">Jump to… <kbd>Ctrl K</kbd></button>
+    </div>
+    <nav class="tabbar" aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+
+    <section id="about">
+      <h2 class="sec-title">About</h2>
+      <p class="lead">I am a <em>full-stack developer</em> who likes building things that work from the database to the screen.</p>
+      <div class="prose">
+        <p>I am studying Computer Science and Engineering at Mohan Babu University in Tirupati, graduating in 2027 with a 9.21 CGPA. I enjoy Java and Spring Boot most, and I pair them with React for the interface.</p>
+        <p>My latest project, LinkTrack, is a URL shortener with a login system I wrote myself using Spring Security and JWT. It is live, running across Vercel, Render and Supabase. Before it, I built AdoPets, a pet adoption platform.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>9.21</b><span>CGPA</span></div>
+        <div class="stat"><b>2</b><span>live projects</span></div>
+        <div class="stat"><b>6</b><span>REST endpoints in LinkTrack</span></div>
+        <div class="stat"><b>2</b><span>certifications</span></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="sec-title">Projects</h2>
+
+      <article class="entry">
+        <div class="when">Aug 2026</div>
+        <div class="body">
+          <h3>LinkTrack<small>Full-stack URL shortener</small></h3>
+          <p>Each user sees only their own links and click data. Authentication is JWT-based and written without any third-party auth provider.</p>
+          <ul class="chips">
+            <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>Spring Data JPA</li><li>Hibernate</li><li>React</li><li>PostgreSQL</li><li>Docker</li>
+          </ul>
+          <ul class="list">
+            <li>6 REST API endpoints for authentication, URL management and click tracking.</li>
+            <li>Stateless authentication with Spring Security, BCrypt password hashing and custom JWT filters.</li>
+            <li>Per-user data isolation, so one account can never read another's links.</li>
+            <li>Custom React light and dark theme that remembers the user's choice.</li>
+          </ul>
+          <div class="arch" aria-label="Deployment">
+            <div class="n"><b>React frontend</b><span>Vercel</span></div>
+            <span class="go" aria-hidden="true">→</span>
+            <div class="n"><b>Spring Boot API</b><span>Render</span><small>Docker container</small></div>
+            <span class="go" aria-hidden="true">→</span>
+            <div class="n"><b>PostgreSQL</b><span>Supabase</span></div>
+          </div>
+          <div class="btns">
+            <a class="btn primary" data-link="linktrackDemo" href="#" hidden>Live demo</a>
+            <a class="btn" data-link="linktrackRepo" href="#" hidden>Source on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="when">Oct 2025</div>
+        <div class="body">
+          <h3>AdoPets<small>Pet adoption platform</small></h3>
+          <p>People post pets that need a home, and others browse them and send adoption requests.</p>
+          <ul class="chips"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+          <ul class="list">
+            <li>User authentication, pet listing management and adoption request handling.</li>
+            <li>Profile dashboards for both donors and adopters.</li>
+            <li>Frontend that handles pet data, user interactions and the adoption workflow.</li>
+            <li>Friendly, responsive interface with attention to user data privacy.</li>
+          </ul>
+          <div class="arch" aria-label="Workflow">
+            <div class="n"><b>Donor</b><small>Posts a pet and manages listings</small></div>
+            <span class="go" aria-hidden="true">→</span>
+            <div class="n"><b>Adopter</b><small>Browses pets and tracks requests</small></div>
+          </div>
+          <div class="btns">
+            <a class="btn primary" data-link="adopetsDemo" href="#" hidden>Live demo</a>
+            <a class="btn" data-link="adopetsRepo" href="#" hidden>Source on GitHub</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2 class="sec-title">Skills</h2>
+      <p class="skill-note" id="skill-note" role="status">Click a skill to see which project uses it.</p>
+      <dl class="skills">
+        <div class="row"><dt>Languages</dt><dd><ul class="chips"><li>Java</li><li>SQL</li></ul></dd></div>
+        <div class="row"><dt>Frontend</dt><dd><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li></ul></dd></div>
+        <div class="row"><dt>Backend</dt><dd><ul class="chips"><li>Spring Boot</li><li>Spring Security</li><li>REST APIs</li></ul></dd></div>
+        <div class="row"><dt>Tools</dt><dd><ul class="chips"><li>VS Code</li><li>Git</li><li>GitHub</li><li>Docker</li></ul></dd></div>
+        <div class="row"><dt>Core CS</dt><dd><ul class="chips"><li>Data Structures and Algorithms</li><li>OOP</li><li>DBMS</li><li>Operating Systems</li></ul></dd></div>
+      </dl>
+    </section>
+
+    <section id="education">
+      <h2 class="sec-title">Education</h2>
+      <article class="entry">
+        <div class="when">Expected 2027</div>
+        <div class="body">
+          <h3>B.Tech, Computer Science and Engineering<small>Mohan Babu University · Full-time</small></h3>
+          <p class="score">9.21 CGPA</p>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="when">2023</div>
+        <div class="body">
+          <h3>12th / Intermediate<small>Narayana Junior College · Board of Intermediate Education, Andhra Pradesh</small></h3>
+          <p class="score">93.5%</p>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="when">2021</div>
+        <div class="body">
+          <h3>10th / SSC<small>Holly Green English Medium School · Board of Secondary Education, Andhra Pradesh</small></h3>
+          <p class="score">100%</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="certifications">
+      <h2 class="sec-title">Certifications</h2>
+      <article class="entry">
+        <div class="when">Jul 2025</div>
+        <div class="body">
+          <h3>Leading Teams: Building Effective Team Cultures</h3>
+          <p>Leadership skills focused on team collaboration, communication and performance management.</p>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="when">Nov 2024</div>
+        <div class="body">
+          <h3>STEP Certification</h3>
+          <p>50 hours of STEP training, with English proficiency shown across listening, speaking, reading and writing.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact">
+      <h2 class="sec-title">Contact</h2>
+      <div class="contact">
+        <h2>Open to internships and entry-level roles.</h2>
+        <p class="email" id="email-text">sreesowmya08@gmail.com</p>
+        <div class="btns">
+          <button class="btn primary" type="button" id="copy-email">Copy email address</button>
+          <a class="btn" data-link="github" href="#" hidden>GitHub</a>
+          <a class="btn" data-link="linkedin" href="#" hidden>LinkedIn</a>
+        </div>
+        <p class="note" id="copy-note" role="status"></p>
+      </div>
+    </section>
+
+    <footer>
+      <span>Geepalyam Sree Sowmya</span>
+      <span>Tirupati, Andhra Pradesh</span>
+    </footer>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
